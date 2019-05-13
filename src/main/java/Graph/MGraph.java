@@ -1,12 +1,16 @@
 package Graph;
 
-import java.util.Arrays;
+import java.util.Date;
 
 public class MGraph extends Graph {
-    private Node[] nodes;
-    private Edge[][] edges;
+    private Node[] nodes;//节点矩阵
+    private Edge[][] edges;//边矩阵
 
     public MGraph(String graphtype) {
+        if(!graphtype.equals("WXT")&&!graphtype.equals("YXT")){
+            System.out.println(new Date()+" 输入图类型错误， tip:图类型可输入WXT（无向图）与YXT（有向图）");
+            System.exit(1);
+        }
         this.graphtype = graphtype;
         nodes = new Node[0];
         edges = new Edge[0][0];
