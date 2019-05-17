@@ -17,8 +17,8 @@ public class LinkQueue<NodeType> extends Queue<NodeType> {
     }
 
     private int nodenumber;//节点数量
-    private Node head;
-    private Node tail;
+    private Node head;//队头
+    private Node tail;//队尾
 
     public LinkQueue() {
         head=new Node(null,null);
